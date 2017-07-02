@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:app5.Views;assembly=app5..NETPortable,Version=v4.5,Profile=Profile259"
+             x:Class="app5.Views.Login">
+    <StackLayout Padding="50" VerticalOptions="Center">
+        <Label HorizontalOptions="Center" Text="Rietavo Turgus" FontSize="40" ></Label>
+        <Entry Placeholder="Prisijungimo vardas" />
+        <Entry IsPassword="true" Placeholder="Slaptažodis" />
+        <Button x:Name="Loginbtn" Text="Prisijungti"/>
+    </StackLayout>
+  
+</ContentPage>
+
+<!--<Label Text="Wrms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label Text="Welcome to Xamarbnklin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <Button Text="Just push the dam button"
+                BackgroundColor="Red"
+                BorderColor="Yellow"
+                BorderWidth="2"/>
+    
+    
+    
+    
+     <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
+            <Picker x:Name="picker" Title="Select a monkey">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>x</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    -->

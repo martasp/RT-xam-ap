@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app5.Views.Items"
+             xmlns:local="app5.Models.Item"
+             >
+
+    <ListView x:Name="ItemsView" ItemsSource="{Binding ItemsData}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Image x:Name="imgFoodItem" Source="{Binding ImgUrl}"
+                           Grid.Row="0" Grid.RowSpan="3" HorizontalOptions="Fill" VerticalOptions="Fill"
+                           HeightRequest="300" Aspect="AspectFill"/>
+                    <BoxView Grid.Row="1" BackgroundColor="Black" Opacity="0.4"
+                           HorizontalOptions="Fill" Grid.RowSpan="2" VerticalOptions="Fill"/>
+                    <StackLayout Grid.Row="1" Padding="10, 5, 10, 0">
+                        <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" Grid.Row="1" HorizontalOptions="Start"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="2" Padding="10, -5, 10, 5">
+                        <Label Text="{Binding Info}" TextColor="White" FontSize="Small" HorizontalOptions="Start"/>
+                        <Label HorizontalTextAlignment="End" Text="{Binding Price}" TextColor="White" FontSize="Medium" />
+                     </StackLayout>
+
+
+                    </Grid>
+                </ViewCell>
+
+                <!--<ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding ImgUrl}" HeightRequest="300" WidthRequest="300"/>
+                        <StackLayout Orientation="Vertical">
+                            <Label x:Name="ItemName" HorizontalTextAlignment="Center" FontSize="20" Text="{Binding Name}"></Label>
+                            <Label x:Name="ItemInfo" Text="{Binding Info}"></Label>
+                            <Label x:Name="ItemPrice" HorizontalTextAlignment="End"  FontSize="20" Text= "{Binding Price}"></Label>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>-->
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+
+
+</ContentPage>
+
+<!--<Label Text="Wrms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+
+        <Label Text="Welcome to Xamarbnklin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <Button Text="Just push the dam button"
+                BackgroundColor="Red"
+                BorderColor="Yellow"
+                BorderWidth="2"/>
+    
+    
+    
+    
+     <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
+            <Picker x:Name="picker" Title="Select a monkey">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>x</x:String>
+                    <x:String>Capuchin Monkey</x:String>
+                    <x:String>Blue Monkey</x:String>
+                    <x:String>Squirrel Monkey</x:String>
+                    <x:String>Golden Lion Tamarin</x:String>
+                    <x:String>Howler Monkey</x:String>
+                    <x:String>Japanese Macaque</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    
+    
+    
+    
+    
+        <ScrollView>
+        <StackLayout Padding="0" VerticalOptions="Center">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center" >
+                <ListView x:Name="ItemsView">
+        <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <Image
+                       Source="{Binding  }"
+                       WidthRequest="200"
+                       HeightRequest="200"
+                       Margin="0,0,0,0"
+                       HorizontalOptions="Center"
+                       />
+                            <StackLayout Orientation="Vertical">
+                                <Label x:Name="ItemName" HorizontalTextAlignment="Center" FontSize="20" Text="{Binding Name}"></Label>
+                                <Label x:Name="ItemInfo" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type"></Label>
+                                <Label x:Name="ItemPrice" HorizontalTextAlignment="End"  FontSize="20" Text= "55$"></Label>
+                            </StackLayout>
+                                </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+        </ListView>                
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+    
+    
+    
+    
+    -->
